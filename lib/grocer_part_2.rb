@@ -25,6 +25,7 @@ def apply_coupons(cart, coupons)
     while index_cart < cart.length do 
       current_item = cart[index_cart] 
       discounted_item = {} 
+<<<<<<< HEAD
       #coup_conditon = current_item[:count] - current_coupons[:num]
       
       if current_coupons[:item] == current_item[:item] 
@@ -33,6 +34,14 @@ def apply_coupons(cart, coupons)
         if coup_conditon
           discounted_item = coupon_hash_maker(current_item, current_coupons)
           
+=======
+      
+      
+      if current_coupons[:item] == current_item[:item] 
+        if 0 < current_item[:count] - current_coupons[:num]
+          discounted_item = coupon_hash_maker(current_item, current_coupons)
+          puts index_cart
+>>>>>>> 347ee5e14a2f0eb4fc55a039f2d5844b7da823e9
           puts"test"
           cart.push(discounted_item)
           puts"tes2"
